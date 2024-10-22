@@ -18,8 +18,8 @@ export default function Login() {
 	const [login, { isLoading }] = useLoginMutation();
 	const { user } = useAppSelector((state: any) => state.user);
 	const [account, setAccount] = useState({
-		email: "test.account@filemanament.com",
-		password: "password",
+		email: "",
+		password: "",
 		error: "",
 	});
 
