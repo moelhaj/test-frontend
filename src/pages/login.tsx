@@ -60,7 +60,7 @@ export default function Login() {
 					)}
 				</CardHeader>
 				<CardContent>
-					<div className="grid gap-4">
+					<form onSubmit={handleSubmit} className="grid gap-4">
 						<div className="grid gap-2">
 							<Label htmlFor="email">Email</Label>
 							<Input
@@ -88,15 +88,10 @@ export default function Login() {
 								Show Password
 							</span>
 						</div>
-						<Button
-							type="submit"
-							disabled={isLoading}
-							className="w-full"
-							onClick={handleSubmit}
-						>
+						<Button type="submit" disabled={isLoading} className="w-full">
 							Login
 						</Button>
-					</div>
+					</form>
 					<div className="mt-4 text-center text-sm">
 						Don&apos;t have an account?{" "}
 						<Link to="/register" className="underline">
